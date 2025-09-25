@@ -1,0 +1,7 @@
+reactpy
+pandas
+fastapi
+uvicorn
+pandas
+numpy
+sklearn
