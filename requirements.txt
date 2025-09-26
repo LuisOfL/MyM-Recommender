@@ -1,7 +1,6 @@
 reactpy
-pandas
 fastapi
-uvicorn
+uvicorn[standard]
 pandas
 numpy
-sklearn
+scikit-learn

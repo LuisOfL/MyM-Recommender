@@ -1,6 +1,6 @@
 from reactpy import component, html, hooks
 from reactpy.backend.fastapi import configure
-from utils import styles
+from src.utils import styles
 import pandas as pd
 import asyncio
 from .MovieCard import MovieCard  
@@ -163,7 +163,7 @@ def MovieSearch():
                             "right": "0",
                             "background": styles.STYLES['colors']['white'],
                             "borderRadius": "16px",
-                            "boxShadow": styles.STYLES['shadows']['xl'],  # ✅ CORREGIDO
+                            "boxShadow": styles.STYLES['shadows']['xl'],  
                             "zIndex": "1000",
                             "maxHeight": "300px",
                             "overflowY": "auto",
@@ -236,7 +236,7 @@ def MovieSearch():
                         }
                     },
                     html.span("✨"),
-                    f"Recomendaciones similares a \"{enviado}\""
+                    f"Similar recommendations to \"{enviado}\""
                 ),
                 
                 (html.div(
@@ -266,7 +266,7 @@ def MovieSearch():
                                 "color": styles.STYLES['colors']['dark']
                             }
                         },
-                        "Analizando películas..."
+                        "Loading..."
                     )
                 ) if cargando else
                 

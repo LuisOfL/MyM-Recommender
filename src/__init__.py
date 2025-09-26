@@ -1,3 +1,5 @@
-from .components import MovieSearch, MovieCard, Header, Footer
+from .components import Header, Footer, HeroSection, MovieSearch, MovieCard
+from .utils import STYLES
+from .models import KNN
 
-__all__ = ["MovieSearch", "MovieCard", "Header", "Footer"]
+__all__ = ["Header", "Footer", "HeroSection", "MovieSearch", "MovieCard", "STYLES", "KNN"]

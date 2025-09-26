@@ -1,6 +1,7 @@
-from .MovieSearch import MovieSearch
-from .MovieCard import MovieCard
 from .Header import Header
 from .Footer import Footer
+from .HeroSection import HeroSection
+from .MovieCard import MovieCard
+from .MovieSearch import MovieSearch
 
-__all__ = ["MovieSearch", "MovieCard", "Header", "Footer"]
+__all__ = ["Header", "Footer", "HeroSection", "MovieCard", "MovieSearch"]

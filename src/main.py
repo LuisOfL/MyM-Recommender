@@ -1,11 +1,12 @@
-from reactpy import component, html, run, hooks
+from reactpy import component, html
 from reactpy.backend.fastapi import configure
 from fastapi import FastAPI
-from components import Footer
-from components import Header
-from components import HeroSection
-from components import MovieSearch
-from utils import styles
+
+# Importaciones absolutas
+from src.components.Header import Header
+from src.components.Footer import Footer
+from src.components.HeroSection import HeroSection
+from src.components.MovieSearch import MovieSearch
 
 app = FastAPI()
 
@@ -18,10 +19,9 @@ def App():
                 "padding": "0",
                 "minHeight": "100vh",
                 "fontFamily": "'Inter', 'Segoe UI', system-ui, sans-serif",
-                "background": styles.STYLES['colors']['light']
+                "background": "#F3F4F6"
             }
         },
-  
         html.style("""
             @keyframes spin {
                 0% { transform: rotate(0deg); }
@@ -35,7 +35,6 @@ def App():
                 box-sizing: border-box;
             }
         """),
-        
         Header(),
         HeroSection(),
         MovieSearch(),
@@ -46,4 +45,4 @@ configure(app, App)
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8002, reload=True)
+    uvicorn.run(app, host="0.0.0.0", port=8000, reload=True)

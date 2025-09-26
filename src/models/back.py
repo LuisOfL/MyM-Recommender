@@ -55,5 +55,5 @@ def KNN(x):
     print("Distancias:", distances)
     res = []
     for x in indices:
-            res.append(list((df_new['title'][x])+'----'))
+            res.append(list((df_new['title'][x])+'  |  '))
     return res

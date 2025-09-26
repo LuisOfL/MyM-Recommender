@@ -1,6 +1,6 @@
 from reactpy import component, html, run, hooks
 from reactpy.backend.fastapi import configure
-from utils import styles
+from src.utils import styles
 
 @component
 def Header():
@@ -104,7 +104,7 @@ def Header():
                             }
                         })
                     },
-                    "About KNN"
+                    "LuisMData"
                 ),
             )
         )
